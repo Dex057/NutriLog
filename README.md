@@ -3,9 +3,8 @@ NutriLog - Diário Alimentar Inteligente
 
 ## Sobre o Projeto
 
-O NutriLog não é apenas um site estático; é uma aplicação dinâmica robusta. Ele permite que o usuário registre suas refeições em tempo real, armazenando dados nutricionais e carimbos de data [...]
+Aplicaçãoq permite que o usuário registre suas refeições em tempo real, armazenando dados nutricionais para acompanhamento diário. 
 
-A arquitetura foi desenhada para ser agnóstica à infraestrutura: o mesmo código roda no seu computador de desenvolvimento e em servidores de nuvem (como Fly.io, AWS ou Heroku) sem alteração de c [...]
 
 ## 🚀 Tecnologias Utilizadas
 
