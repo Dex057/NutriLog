@@ -63,27 +63,6 @@ python food_tracker.py
 **Acesse:**  
 Abra [http://localhost:8000](http://localhost:8000) no seu navegador.
 
----
-
-## ☁️ Deploy (Fly.io)
-
-A aplicação já está "Dockerizada" e pronta para a nuvem. O código detecta automaticamente o ambiente de produção.
-
-**Inicialize o app:**
-
-```bash
-fly launch
-```
-
-**Responda às configurações:**
-
-- Postgresql Database? YES (Essencial).
-- Deploy now? YES.
-
-O Fly.io irá provisionar o banco, injetar a senha segura via variáveis de ambiente e subir o container.
-
----
-
 ## 🎨 Layout e Design
 
 A interface foi construída pensando na experiência do usuário (UX), utilizando TailwindCSS para um design limpo e responsivo.
