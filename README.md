@@ -33,7 +33,7 @@ Aplicaçãoq permite que o usuário registre suas refeições em tempo real, arm
 **Clone o repositório:**
 
 ```bash
-git clone https://github.com/SEU-USUARIO/nutrilog.git
+git clone https://github.com/Dex057/nutrilog.git
 cd nutrilog
 ```
 
