@@ -1,99 +1,97 @@
 # NutriLog
 NutriLog - Diário Alimentar Inteligente
 
-Sobre o Projeto
+## Sobre o Projeto
 
-O NutriLog não é apenas um site estático; é uma aplicação dinâmica robusta. Ele permite que o usuário registre suas refeições em tempo real, armazenando dados nutricionais e carimbos de data/hora em um banco de dados relacional.
+O NutriLog não é apenas um site estático; é uma aplicação dinâmica robusta. Ele permite que o usuário registre suas refeições em tempo real, armazenando dados nutricionais e carimbos de data [...]
 
-A arquitetura foi desenhada para ser agnóstica à infraestrutura: o mesmo código roda no seu computador de desenvolvimento e em servidores de nuvem (como Fly.io, AWS ou Heroku) sem alteração de código, graças à detecção automática de variáveis de ambiente.
+A arquitetura foi desenhada para ser agnóstica à infraestrutura: o mesmo código roda no seu computador de desenvolvimento e em servidores de nuvem (como Fly.io, AWS ou Heroku) sem alteração de c [...]
 
-🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-Backend: Python 3.9 + FastAPI (Alta performance e validação de dados com Pydantic).
+- **Backend:** Python 3.9 + FastAPI (Alta performance e validação de dados com Pydantic).
+- **Banco de Dados:** PostgreSQL (Driver psycopg2).
+- **Frontend:** HTML5, Vanilla JS e TailwindCSS (Interface moderna e responsiva).
+- **Infraestrutura:** Docker (Containerização) e suporte a 12-Factor App via `DATABASE_URL`.
 
-Banco de Dados: PostgreSQL (Driver psycopg2).
+## ⚙️ Funcionalidades
 
-Frontend: HTML5, Vanilla JS e TailwindCSS (Interface moderna e responsiva).
+- [x] Registro Detalhado: Adição de múltiplos itens/ingredientes por refeição.
+- [x] Timestamp Personalizável: Registro retroativo ou em tempo real (Data e Hora).
+- [x] Histórico Semanal: Visualização agrupada por datas (Hoje, Ontem, etc).
+- [x] Persistência de Dados: Uso de banco SQL robusto (nada de dados voláteis).
+- [x] Feedback Visual: Interface com notificações (Toasts) e validação de erros.
 
-Infraestrutura: Docker (Containerização) e suporte a 12-Factor App via DATABASE_URL.
+## 💻 Como Rodar Localmente
 
-⚙️ Funcionalidades
+### Pré-requisitos
 
-[x] Registro Detalhado: Adição de múltiplos itens/ingredientes por refeição.
+- Python 3.9+
+- PostgreSQL instalado e rodando.
 
-[x] Timestamp Personalizável: Registro retroativo ou em tempo real (Data e Hora).
+### Passo a Passo
 
-[x] Histórico Semanal: Visualização agrupada por datas (Hoje, Ontem, etc).
+**Clone o repositório:**
 
-[x] Persistência de Dados: Uso de banco SQL robusto (nada de dados voláteis).
-
-[x] Feedback Visual: Interface com notificações (Toasts) e validação de erros.
-
-💻 Como Rodar Localmente
-
-Pré-requisitos
-
-Python 3.9+
-
-PostgreSQL instalado e rodando.
-
-Passo a Passo
-
-Clone o repositório:
-
-git clone [https://github.com/SEU-USUARIO/nutrilog.git](https://github.com/SEU-USUARIO/nutrilog.git)
+```bash
+git clone https://github.com/SEU-USUARIO/nutrilog.git
 cd nutrilog
+```
 
+**Configure o Banco de Dados:**  
+Crie um banco chamado `food_tracker` no seu Postgres local.
 
-Configure o Banco de Dados:
-Crie um banco chamado food_tracker no seu Postgres local.
-
+```bash
 # No terminal Linux/Mac ou SQL Shell
 createdb food_tracker
+```
 
+> **Nota:** O código espera que a senha do usuário postgres seja `postgres`. Se for diferente, ajuste a variável de ambiente `DATABASE_URL`.
 
-(Nota: O código espera que a senha do usuário postgres seja postgres. Se for diferente, ajuste a variável de ambiente DATABASE_URL).
+**Instale as dependências:**
 
-Instale as dependências:
-
+```bash
 pip install -r requirements.txt
+```
 
+**Execute o servidor:**
 
-Execute o servidor:
-
+```bash
 python food_tracker.py
+```
 
+**Acesse:**  
+Abra [http://localhost:8000](http://localhost:8000) no seu navegador.
 
-Acesse:
-Abra http://localhost:8000 no seu navegador.
+---
 
-☁️ Deploy (Fly.io)
+## ☁️ Deploy (Fly.io)
 
 A aplicação já está "Dockerizada" e pronta para a nuvem. O código detecta automaticamente o ambiente de produção.
 
-Inicialize o app:
+**Inicialize o app:**
 
+```bash
 fly launch
+```
 
+**Responda às configurações:**
 
-Responda às configurações:
-
-Postgresql Database? YES (Essencial).
-
-Deploy now? YES.
+- Postgresql Database? YES (Essencial).
+- Deploy now? YES.
 
 O Fly.io irá provisionar o banco, injetar a senha segura via variáveis de ambiente e subir o container.
 
-🎨 Layout e Design
+---
+
+## 🎨 Layout e Design
 
 A interface foi construída pensando na experiência do usuário (UX), utilizando TailwindCSS para um design limpo e responsivo.
 
-Tema: Esmeralda/Saúde.
+- Tema: Esmeralda/Saúde.
+- Ícones: Lucide Icons.
+- Mobile First: Funciona perfeitamente em celulares.
 
-Ícones: Lucide Icons.
-
-Mobile First: Funciona perfeitamente em celulares.
-
-👨‍💻 Autor
+## 👨‍💻 Autor
 
 Desenvolvido por Dex057 © 2025.
