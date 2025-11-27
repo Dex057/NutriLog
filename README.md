@@ -17,8 +17,8 @@ Aplicaçãoq permite que o usuário registre suas refeições em tempo real, arm
 
 - [x] Registro Detalhado: Adição de múltiplos itens/ingredientes por refeição.
 - [x] Timestamp Personalizável: Registro retroativo ou em tempo real (Data e Hora).
-- [x] Histórico Semanal: Visualização agrupada por datas (Hoje, Ontem, etc).
-- [x] Persistência de Dados: Uso de banco SQL robusto (nada de dados voláteis).
+- [x] Histórico Semanal: Visualização agrupada por datas.
+- [x] Persistência de Dados: Uso de banco SQL robusto.
 - [x] Feedback Visual: Interface com notificações (Toasts) e validação de erros.
 
 ## 💻 Como Rodar Localmente
