@@ -219,6 +219,7 @@
                         <option value="ml">ml</option>
                         <option value="cal">kcal</option>
                         <option value="un">un</option>
+                        <option value="colher">colher</option>
                     </select>
                 </div>
                 <button type="button" onclick="removeItem(this)" class="p-2 text-slate-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors">
@@ -353,8 +354,8 @@
             let html = '';
             
             for (const [date, dayMeals] of Object.entries(grouped)) {
-                // Formatar cabeçalho da data
-                const displayDate = formatDateDisplay(dayMeals[0].created_at); // Usa a data do primeiro item para calcular o dia
+                
+                const displayDate = formatDateDisplay(dayMeals[0].created_at); 
                 
                 html += `
                     <div class="relative pl-8 border-l-2 border-slate-200 pb-2 last:border-0 last:pb-0">
